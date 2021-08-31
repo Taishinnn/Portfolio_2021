@@ -72,6 +72,10 @@ header {
     }
   }
 
+  .media {
+    writing-mode: vertical-lr;
+  }
+
   p {
     margin: 0 0 100px 150px;
     color: #dbd7b6;
@@ -275,14 +279,14 @@ nav {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 481px) and (max-width: 900px) {
   header {
     margin-top: 20px;
 
     p {
       margin-top: 105px;
       margin-left: 110px;
-      font-size: 35px;
+      font-size: 33px;
       letter-spacing: 0.8em;
       height: 50%;
       width: 70%;
@@ -291,11 +295,43 @@ nav {
     }
   }
 
-  .moon {
+  header.moon {
     width: 100%;
     margin-right: 60px;
     background-size: 350px;
   }
 }
 
+@media screen and (max-width: 480px) {
+    header p {
+      margin: 0;
+      font-size: 12px;
+      letter-spacing: 0.7em;
+      top: 100px;
+      height: 100px;
+      width: 200px;
+      -webkit-transform-origin: center 400%;
+      transform-origin: center 150%;
+    }
+
+    .moon {
+      width: 100%;
+      margin: -100px 10px 0 30px;
+      background-size: 170px;
+    }
+
+    header h1 {
+      display: none;
+    }
+
+    nav {
+      font-size: 50px;
+      width: 300px;
+      -webkit-transform: translate(300px);
+      transform: translate(300px);
+      -webkit-transition: all .5s;
+      transition: all .5s;
+    }
+    
+}
 /*# sourceMappingURL=style.css.map */
