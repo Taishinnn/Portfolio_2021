@@ -1,48 +1,70 @@
+@charset "UTF-8";
 body {
   width: 100%;
-	height: 100vh;
-	background:linear-gradient(90deg, #c07272,#8862b7f4,#9aa9db);/*グラデーションを定義*/
-	background-size: 300% 500%;
-	animation: bggradient 10s ease infinite;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(#c07272), color-stop(#8862b7f4), to(#9aa9db));
+  background: linear-gradient(90deg, #c07272, #8862b7f4, #9aa9db);
+  /*グラデーションを定義*/
+  background-size: 300% 500%;
+  -webkit-animation: bggradient 10s ease infinite;
+  animation: bggradient 10s ease infinite;
   font-family: 'Rampart One', cursive;
 }
 
-@keyframes bggradient{
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+@-webkit-keyframes bggradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes bggradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header {
   height: 1000px;
   margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center; 
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 header h1 {
-  position:relative;
+  position: relative;
   font-size: 70px;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   letter-spacing: 1em;
   margin: 100px 0 0 60px;
 }
 
-header h1::before{
-  content:"";
-  display:inline-block;
-  width:3px;
-  height:600px;
-  background-color:#0097A7;
-  position:absolute;
-  top:-10px;
-  left:-5px;
+header h1::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 600px;
+  background-color: #0097A7;
+  position: absolute;
+  top: -10px;
+  left: -5px;
 }
 
 header p {
@@ -53,16 +75,31 @@ header p {
   letter-spacing: 1.0em;
   height: 50%;
   width: 60%;
-  text-align: center;  
+  text-align: center;
+  -webkit-transform-origin: center 75%;
   transform-origin: center 75%;
-  animation: rotate1 30s linear infinite; 
+  -webkit-animation: rotate1 30s linear infinite;
+  animation: rotate1 30s linear infinite;
 }
 
-@keyframes rotate1 { 
+@-webkit-keyframes rotate1 {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  100% {  
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -71,20 +108,19 @@ header p {
   height: 500px;
   width: 1000px;
   margin-top: 100px;
-  background-image: url(../image/moon.PNG);  
+  background-image: url(../image/moon.PNG);
   background-size: 500px;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.7;
 }
 
-
-
 .wrapper {
   height: 100%;
   overflow-x: hidden;
   position: relative;
 }
+
 .overlay {
   content: "";
   display: block;
@@ -96,8 +132,10 @@ header p {
   left: 0;
   z-index: 2;
   opacity: 0;
+  -webkit-transition: opacity .5s;
   transition: opacity .5s;
 }
+
 .overlay.open {
   width: 100%;
   height: 100%;
@@ -115,35 +153,47 @@ header p {
   right: 30px;
   z-index: 100;
 }
+
 .menu-trigger span {
   display: inline-block;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
   left: 0;
   width: 100%;
   height: 4px;
   background-color: #000;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
+
 .menu-trigger.active span {
   background-color: #fff;
 }
+
 .menu-trigger span:nth-of-type(1) {
   top: 0;
 }
+
 .menu-trigger.active span:nth-of-type(1) {
+  -webkit-transform: translateY(12px) rotate(-45deg);
   transform: translateY(12px) rotate(-45deg);
 }
+
 .menu-trigger span:nth-of-type(2) {
   top: 12px;
 }
+
 .menu-trigger.active span:nth-of-type(2) {
   opacity: 0;
 }
+
 .menu-trigger span:nth-of-type(3) {
   bottom: 0;
 }
+
 .menu-trigger.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-12px) rotate(45deg);
   transform: translateY(-12px) rotate(45deg);
 }
 
@@ -152,40 +202,47 @@ nav {
   width: 450px;
   height: 100%;
   padding-top: 80px;
-  background-color: rgb(16, 69, 153, 0.8);
+  background-color: #104599;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 10;
+  -webkit-transform: translate(450px);
   transform: translate(450px);
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
+
 nav.open {
+  -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
+
 nav li {
   color: #fff;
   text-align: center;
   padding: 50px 0;
 }
-nav li:hover {
-  color:#32b0f9;
-}
 
+nav li:hover {
+  color: #32b0f9;
+}
 
 nav ul {
   list-style: none;
 }
 
-@media screen and (min-width: 901px) and (max-width: 1200px) {
-  header p {
-    margin-top: 0px;
-    margin-left: 130px;
-    height: 50%;
-    width: 80%;
-    transform-origin: center 95%;
-  }
-  
+.about .title {
+  text-align: center;
+  font-size: 70px;
+}
+
+.egg {
+  height: 800px;
+  background-image: url(../image/egg.PNG);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1400px) {
@@ -194,40 +251,40 @@ nav ul {
     font-size: 50px;
     height: 50%;
     width: 60%;
+    -webkit-transform-origin: center 92%;
     transform-origin: center 92%;
   }
-  
 }
 
-@media screen and (max-width:900px){
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  header p {
+    margin-top: 0px;
+    margin-left: 130px;
+    height: 50%;
+    width: 80%;
+    -webkit-transform-origin: center 95%;
+    transform-origin: center 95%;
+  }
+}
+
+@media screen and (max-width: 900px) {
   header {
     margin-top: 20px;
   }
   header p {
     margin-top: 105px;
     margin-left: 110px;
-    font-size: 40px;
+    font-size: 35px;
     letter-spacing: 0.8em;
     height: 50%;
     width: 70%;
+    -webkit-transform-origin: center 65%;
     transform-origin: center 65%;
   }
-  .moon{
+  .moon {
     width: 100%;
     margin-right: 60px;
     background-size: 350px;
   }
-  
 }
-
-
-.egg {
-  height: 800px;
-  background-image: url(../image/egg.PNG);
-  background-size: 600px;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.7;
-}
-
-
+/*# sourceMappingURL=style.css.map */
