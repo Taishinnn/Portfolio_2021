@@ -177,13 +177,6 @@ nav ul {
   list-style: none;
 }
 
-@media screen and (min-width:901px){
-  .wrapper {
-    display: none;
-  }
-  
-}
-
 @media screen and (min-width: 901px) and (max-width: 1200px) {
   header p {
     margin-top: 0px;
