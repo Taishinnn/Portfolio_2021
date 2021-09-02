@@ -36,7 +36,7 @@ body {
 }
 
 header {
-  height: 1000px;
+  height: 800px;
   margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,17 +236,31 @@ nav ul {
   list-style: none;
 }
 
-.about .title {
-  text-align: center;
+/* main */
+
+.about {
+  position: relative;
+}
+
+.title {
   font-size: 70px;
+  text-align: center;
+}
+
+.folio {
+  font-size: 30px;
+  color:rgb(27, 255, 160);
+  position: absolute; 
+  padding: 10px 20px 0 20px;
 }
 
 .egg {
-  height: 800px;
-  background-image: url(../image/egg.PNG);
-  background-size: contain;
-  background-repeat: no-repeat;
   opacity: 0.5;
+}
+
+.Tiktok {
+  text-align: center;
+  display: flex;
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1400px) {
@@ -296,8 +310,8 @@ nav ul {
   .media {
     display: block;
     position: absolute;
-    margin: -50px 190px 10px -10px;
-    font-size: 40px;
+    margin: -50px 190px 10px 0;
+    font-size: 35px;
     writing-mode: horizontal-tb;
   }
 
