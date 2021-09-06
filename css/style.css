@@ -71,6 +71,20 @@ header h1::before {
   display: none;
 }
 
+.supplement1 {
+  position: absolute;
+  margin-top: -30px;
+  font-size: 60px;
+  letter-spacing: 0.7em;
+}
+
+.supplement2 {
+  position: absolute;
+  margin: 650px 0 0 30px;
+  font-size: 60px;
+  letter-spacing: 0.7em;
+}
+
 header p {
   margin: 0 0 100px 150px;
   color: #dbd7b6;
@@ -252,43 +266,58 @@ img {
 }
 
 .about ul {
+  padding: 0;
   margin:auto;
 }
 
 .about p {
   margin: 0;
   font-size: 40px;
-  color:rgb(11, 248, 23)
+  color:rgb(0, 66, 120)
 }
 
 .about ul li {
   display: flex;
   align-items: center;
-
 }
 
 
-.about ul li .photo,ul li .txt {
+.about ul li .fuwat,ul li .txt {
   width: 50%;
   box-sizing: border-box;
 }
 
 ul li:nth-child(odd) {
-        flex-direction: row-reverse;
-    }
+    flex-direction: row-reverse;
+}
 
-    ul li:nth-child(odd) .txt {
-        padding-right: 10px;
-    }
-
-    ul li:nth-child(even) .txt {
-        padding-left: 50px;
-    }
-
-.Tiktok {
+.tiktok {
   text-align: center;
   display: flex;
 }
+
+/* フェードイン */
+.fuwatAnime {
+  -webkit-animation-fill-mode:both;
+  -ms-animation-fill-mode:both;
+  animation-fill-mode:both;
+  -webkit-animation-duration:1.5s;
+  -ms-animation-duration:1.5s;
+  animation-duration:1.5s;
+  -webkit-animation-name: fuwatAnime;
+  -ms-animation-name: fuwatAnime;
+  animation-name: fuwatAnime;
+  visibility: visible !important;
+}
+@-webkit-keyframes fuwatAnime {
+  0% { opacity: 0; -webkit-transform: translateY(-20px); }
+  100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+@keyframes fuwatAnime {
+  0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+  100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+}
+
 
 @media screen and (min-width: 1201px) and (max-width: 1400px) {
   header p {
