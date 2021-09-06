@@ -46,6 +46,28 @@ header {
   justify-content: center;
 }
 
+/* フェードイン */
+.fuwatAnime {
+  -webkit-animation-fill-mode:both;
+  -ms-animation-fill-mode:both;
+  animation-fill-mode:both;
+  -webkit-animation-duration:1.5s;
+  -ms-animation-duration:1.5s;
+  animation-duration:1.5s;
+  -webkit-animation-name: fuwatAnime;
+  -ms-animation-name: fuwatAnime;
+  animation-name: fuwatAnime;
+  visibility: visible !important;
+}
+@-webkit-keyframes fuwatAnime {
+  0% { opacity: 0; -webkit-transform: translateY(-20px); }
+  100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+@keyframes fuwatAnime {
+  0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+  100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+}
+
 header h1 {
   position: relative;
   font-size: 70px;
@@ -291,32 +313,16 @@ ul li:nth-child(odd) {
     flex-direction: row-reverse;
 }
 
+.strong {
+  margin: 10px;
+}
+
 .tiktok {
   text-align: center;
   display: flex;
 }
 
-/* フェードイン */
-.fuwatAnime {
-  -webkit-animation-fill-mode:both;
-  -ms-animation-fill-mode:both;
-  animation-fill-mode:both;
-  -webkit-animation-duration:1.5s;
-  -ms-animation-duration:1.5s;
-  animation-duration:1.5s;
-  -webkit-animation-name: fuwatAnime;
-  -ms-animation-name: fuwatAnime;
-  animation-name: fuwatAnime;
-  visibility: visible !important;
-}
-@-webkit-keyframes fuwatAnime {
-  0% { opacity: 0; -webkit-transform: translateY(-20px); }
-  100% { opacity: 1; -webkit-transform: translateY(0); }
-}
-@keyframes fuwatAnime {
-  0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
-  100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
-}
+
 
 
 @media screen and (min-width: 1201px) and (max-width: 1400px) {
@@ -339,11 +345,29 @@ ul li:nth-child(odd) {
     -webkit-transform-origin: center 95%;
     transform-origin: center 95%;
   }
+  .supplement1 {
+    margin-top: -70px;
+    font-size: 50px;
+    letter-spacing: 0.5em;
+  }
+  .supplement2 {
+    margin: 640px 0 0 160px;
+    font-size: 50px;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 900px) {
   header {
     margin-top: 20px;
+  }
+  .supplement1 {
+    margin-top: 10px;
+    font-size: 38px;
+    letter-spacing: 0.5em;
+  }
+  .supplement2 {
+    margin: 600px 0 0 160px;
+    font-size: 50px;
   }
   header p {
     margin-top: 105px;
@@ -363,36 +387,46 @@ ul li:nth-child(odd) {
 }
 
 @media screen and (max-width: 480px) {
-  .media {
-    display: block;
-    position: absolute;
-    margin: -50px 190px 10px 0;
-    font-size: 35px;
-    writing-mode: horizontal-tb;
+  
+  header {
+    height: 430px;
   }
-
-  .sp {
-    margin-left: 50px;
-  }
-
   header p {
     margin: 0;
-    font-size: 12px;
-    letter-spacing: 0.7em;
-    top: 100px;
-    height: 100px;
-    width: 200px;
-    -webkit-transform-origin: center 400%;
-    transform-origin: center 150%;
+    margin-left: 48px;
+    font-size: 20px;
+    letter-spacing: 0.8em;
+    top: 75px;
+    height: 70px;
+    width: 250px;
+    transform-origin: center 245%;
   }
   .moon {
     width: 100%;
-    margin: -100px 10px 0 30px;
-    background-size: 170px;
+    margin: -100px 30px 0 30px;
+    background-size: 230px;
   }
+
+  h1::before {
+    height: 300px!important;
+  }
+
   header h1 {
-    display: none;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 35px;
   }
+
+  .supplement1 {
+    margin: -90px 0 0 50px;
+    font-size: 30px;
+    letter-spacing: 0.5em;
+  }
+  .supplement2 {
+    margin: 320px 0 0 70px;
+    font-size: 35px;
+  }
+
   nav {
     font-size: 50px;
     width: 300px;
@@ -400,6 +434,14 @@ ul li:nth-child(odd) {
     transform: translate(300px);
     -webkit-transition: all .5s;
     transition: all .5s;
+  }
+
+  .about p {
+    font-size: 15px;
+  }
+
+  .tiktok {
+    flex-wrap: wrap;
   }
 }
 /*# sourceMappingURL=style.css.map */
