@@ -315,6 +315,7 @@ ul li:nth-child(odd) {
 
 .strong {
   margin: 10px;
+  font-size: 30px;
 }
 
 .tiktok {
@@ -383,6 +384,9 @@ ul li:nth-child(odd) {
     width: 100%;
     margin-right: 60px;
     background-size: 350px;
+  }
+  .tiktok {
+    flex-wrap: wrap;
   }
 }
 
