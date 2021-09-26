@@ -287,6 +287,10 @@ img {
   text-align: center;
 }
 
+.name {
+  padding-left: 50px;
+}
+
 .about ul {
   padding: 0;
   margin:auto;
@@ -385,6 +389,9 @@ ul li:nth-child(odd) {
     margin-right: 60px;
     background-size: 350px;
   }
+  .name {
+    padding-left: 15px;
+  }
   .about p {
     font-size: 25px;
   }
@@ -424,6 +431,10 @@ ul li:nth-child(odd) {
     font-size: 35px;
   }
 
+  .name {
+    padding-left: 5px;
+  }
+
   .supplement1 {
     margin: -90px 0 0 50px;
     font-size: 30px;
@@ -444,7 +455,7 @@ ul li:nth-child(odd) {
   }
 
   .about p {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .tiktok {
