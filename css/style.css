@@ -314,8 +314,8 @@ ul li:nth-child(odd) {
 }
 
 .strong {
-  margin: 10px;
-  font-size: 30px;
+  margin: 30px;
+  font-size: 40px;
 }
 
 .tiktok {
@@ -384,6 +384,9 @@ ul li:nth-child(odd) {
     width: 100%;
     margin-right: 60px;
     background-size: 350px;
+  }
+  .about p {
+    font-size: 25px;
   }
   .tiktok {
     flex-wrap: wrap;
