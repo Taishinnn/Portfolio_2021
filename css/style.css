@@ -71,40 +71,31 @@ header {
 header h1 {
   position: relative;
   font-size: 70px;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
   letter-spacing: 1em;
-  margin: 100px 0 0 60px;
+  margin: 0 0 0 60px;
+  height: 210px;
+  border-bottom: solid 3px #ffc778;
 }
 
-header h1::before {
-  content: "";
-  display: inline-block;
-  width: 3px;
-  height: 600px;
-  background-color: #0097A7;
+header h1:after {
   position: absolute;
-  top: -10px;
-  left: -5px;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px skyblue;
+  bottom: -3px;
+  width: 50%;
 }
 
-.media {
-  display: none;
-}
-
-.supplement1 {
-  position: absolute;
-  margin-top: -30px;
-  font-size: 60px;
-  letter-spacing: 0.7em;
-}
 
 .supplement2 {
   position: absolute;
-  margin: 650px 0 0 30px;
+  margin: 950px 0 0 30px;
   font-size: 60px;
   letter-spacing: 0.7em;
+}
+
+#example1 {
+  margin: 0;
 }
 
 header p {
@@ -284,6 +275,7 @@ img {
 
 .title {
   font-size: 70px;
+  margin-top: 350px;
   text-align: center;
 }
 
@@ -350,13 +342,8 @@ ul li:nth-child(odd) {
     -webkit-transform-origin: center 95%;
     transform-origin: center 95%;
   }
-  .supplement1 {
-    margin-top: -70px;
-    font-size: 50px;
-    letter-spacing: 0.5em;
-  }
   .supplement2 {
-    margin: 640px 0 0 160px;
+    margin: 740px 0 0 160px;
     font-size: 50px;
   }
 }
@@ -365,13 +352,8 @@ ul li:nth-child(odd) {
   header {
     margin-top: 20px;
   }
-  .supplement1 {
-    margin-top: 10px;
-    font-size: 38px;
-    letter-spacing: 0.5em;
-  }
   .supplement2 {
-    margin: 600px 0 0 160px;
+    margin: 800px 30px 0 160px;
     font-size: 50px;
   }
   header p {
@@ -435,13 +417,8 @@ ul li:nth-child(odd) {
     padding-left: 5px;
   }
 
-  .supplement1 {
-    margin: -90px 0 0 50px;
-    font-size: 30px;
-    letter-spacing: 0.5em;
-  }
   .supplement2 {
-    margin: 320px 0 0 70px;
+    margin: 600px 0 0 70px;
     font-size: 35px;
   }
 
