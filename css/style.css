@@ -105,7 +105,7 @@ header h1:after {
 
 .supplement2 {
   position: absolute;
-  padding-top: 800px;
+  padding-top: 1000px;
   width: 100%;
   text-align: center;
   font-size: 60px;
@@ -233,7 +233,8 @@ nav {
   width: 450px;
   height: 100%;
   padding-top: 80px;
-  background-color: #104599;
+  background-color: #98dd7d;
+  opacity: 0.8;
   position: fixed;
   top: 0;
   right: 0;
@@ -256,11 +257,11 @@ nav li {
 }
 
 nav a:hover {
-  color: #32b0f9;
+  color: #bcc57f;
 }
 
 nav a:visited {
-  color: rgb(248, 236, 11);
+  color: rgb(60, 51, 140);
 }
 
 nav ul {
@@ -291,7 +292,8 @@ img {
 .about p {
   margin: 0;
   font-size: 40px;
-  color:rgb(0, 66, 120)
+  color:rgb(55, 68, 64);
+  font-weight: bold;
 }
 
 .about ul li {
