@@ -271,9 +271,6 @@ nav ul {
 
 /* main */
 
-main{
-  display: none;
-}
 
 img {
   vertical-align: top
@@ -316,8 +313,27 @@ ul li:nth-child(odd) {
 }
 
 .strong {
-  margin: 30px;
-  font-size: 40px;
+  position: relative;
+  margin: 10em 10em;
+  padding: 0.5em 1em;
+  border: solid 6px #62c1ce;
+  border-radius: 5px 5px 0 0;
+}
+.strong .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -67px;
+  left: -3px;
+  padding: 0 9px;
+  height: 65px;
+  line-height: 65px;
+  font-size: 57px;
+  background: #62c1ce;
+  border-radius: 5px 5px 0 0;
+}
+.strong p {
+  margin: 0; 
+  padding: 0;
 }
 
 .tiktok {
