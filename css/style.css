@@ -91,14 +91,15 @@ header h1:after {
 
 #example1 {
   position: absolute;
-  height: 500px;
-  margin: -600px 0 0 360px;
+  height: 65%;
+  width: 100%;
+  margin-top: -33%;
   font-size: 60px;
   color: #dfff0c;
   letter-spacing: 0.8em;
   text-align: center;
-  -webkit-transform-origin: center 100%;
-  transform-origin: center 80%;
+  -webkit-transform-origin: center 50%;
+  transform-origin: center 70%;
   -webkit-animation: rotate1 50s linear infinite;
   animation: rotate1 50s linear infinite;
 }
@@ -232,7 +233,7 @@ nav {
   font-size: 50px;
   width: 450px;
   height: 100%;
-  padding-top: 80px;
+  padding-top: 60px;
   background-color: #98dd7d;
   opacity: 0.8;
   position: fixed;
@@ -257,11 +258,11 @@ nav li {
 }
 
 nav a:hover {
-  color: #bcc57f;
+  color: #494d30;
 }
 
 nav a:visited {
-  color: rgb(60, 51, 140);
+  color: rgb(39, 38, 43);
 }
 
 nav ul {
@@ -270,6 +271,9 @@ nav ul {
 
 /* main */
 
+main{
+  display: none;
+}
 
 img {
   vertical-align: top
@@ -325,56 +329,32 @@ ul li:nth-child(odd) {
 
 
 @media screen and (min-width: 1201px) and (max-width: 1400px) {
-  header p {
-    margin: 0 0 100px 150px;
-    font-size: 50px;
-    height: 50%;
-    width: 60%;
-    -webkit-transform-origin: center 92%;
-    transform-origin: center 92%;
+  #example1 {
+    margin-top: -43%;
+    -webkit-animation: rotate1 0s linear infinite;
+    animation: rotate1 0s linear infinite;
   }
 }
 
 @media screen and (min-width: 901px) and (max-width: 1200px) {
-  header p {
-    margin-top: 0px;
-    margin-left: 130px;
-    height: 50%;
-    width: 80%;
-    -webkit-transform-origin: center 95%;
-    transform-origin: center 95%;
-  }
-  .supplement2 {
-    margin: 740px 0 0 160px;
-    font-size: 50px;
+  #example1 {
+    margin-top: -55%;
+    -webkit-animation: rotate1 0s linear infinite;
+    animation: rotate1 0s linear infinite;
   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 900px) {
-  header {
-    margin-top: 20px;
-  }
-  header h1 {
-    margin-top: 50px;
-  }
-  header p {
-    margin-top: 105px;
-    margin-left: 110px;
-    font-size: 33px;
-    letter-spacing: 0.8em;
-    height: 50%;
-    width: 70%;
-    -webkit-transform-origin: center 65%;
-    transform-origin: center 65%;
+  #example1 {
+    font-size: 305%;
+    margin-top: -45%;
+    -webkit-animation: rotate1 0s linear infinite;
+    animation: rotate1 0s linear infinite;
   }
   .moon {
     width: 100%;
     margin-right: 60px;
-    background-size: 350px;
-  }
-  .supplement2 {
-    margin: 800px 30px 0 160px;
-    font-size: 50px;
+    background-size: 480px;
   }
   .name {
     padding-left: 15px;
@@ -388,24 +368,18 @@ ul li:nth-child(odd) {
 }
 
 @media screen and (max-width: 480px) {
-  
-  header {
-    height: 430px;
-  }
-  header p {
-    margin: 0;
-    margin-left: 48px;
-    font-size: 20px;
-    letter-spacing: 0.8em;
-    top: 75px;
-    height: 70px;
-    width: 250px;
-    transform-origin: center 245%;
+  #example1 {
+    font-size: 30px;
+    margin-top: -210%;
+    margin-left: 30px;
+    letter-spacing: 0.7em;
+    -webkit-animation: rotate1 0s linear infinite;
+    animation: rotate1 0s linear infinite;
   }
   .moon {
     width: 100%;
-    margin: -100px 30px 0 30px;
-    background-size: 230px;
+    margin: -200px 30px 0 30px;
+    background-size: 300px;
   }
 
   h1::before {
@@ -420,11 +394,6 @@ ul li:nth-child(odd) {
 
   .name {
     padding-left: 5px;
-  }
-
-  .supplement2 {
-    margin: 600px 0 0 70px;
-    font-size: 35px;
   }
 
   nav {
